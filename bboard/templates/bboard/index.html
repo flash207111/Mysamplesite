@@ -1,26 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Главная - Доска объявлений</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-          crossorigin="anonymous">
-</head>
-<body>
+{% extends 'bboard/base.html' %}
+
+{% block content %}
     <div class="container-fluid">
         <h1>Объявления</h1>
     </div>
-    {% for bb in object_list %}
+    {% for bb in bbs %}
         <div class="container">
             <h2>{{ bb.title }}</h2>
             <p>{{ bb.content }}</p>
             <p>Цена: {{ bb.price }} руб.</p>
+            <p class="small">
+                <a href="{% url 'index' %}{{ bb.rubric.pk }}/">{{ bb.rubric.name }}</a>
+            </p>
             <p class="small">Дата публикации: {{ bb.published|date:"d.m.Y H:i" }}</p>
 {#            <p>{{ bb.price }}</p>#}
 
         </div>
     {% endfor %}
 
-</body>
-</html>
+{% endblock %}

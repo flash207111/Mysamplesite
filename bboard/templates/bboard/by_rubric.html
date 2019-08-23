@@ -1,0 +1,20 @@
+{% extends 'bboard/base.html' %}
+
+{% block content %}
+
+    <div class="container-fluid">
+        <h1>Объявления</h1>
+        <h3>Рубрика: {{ current_rubric.name }}</h3>
+    </div>
+
+        <div class="container">
+            {% for bb in bbs %}
+                <h4>{{ bb.title }}</h4>
+                <p>{{ bb.content }}</p>
+                <p>Цена: {{ bb.price }} руб.</p>
+                <p class="small">Дата публикации: {{ bb.published|date:"d.m.Y H:i" }}</p>
+    {#            <p>{{ bb.price }}</p>#}
+            {% endfor %}
+
+        </div>
+{% endblock %}

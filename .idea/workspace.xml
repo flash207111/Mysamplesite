@@ -5,8 +5,11 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bboard/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/bboard/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bboard/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/bboard/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bboard/templates/bboard/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/bboard/templates/bboard/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bboard/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/bboard/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bboard/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/bboard/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/samplesite/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/samplesite/settings.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,7 +29,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1PhORr1PTJtF5qZCjxuZJi7W6tk" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -34,6 +39,12 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../trydjango" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/templates" />
+      <recent name="$PROJECT_DIR$/bboard/templates/bboard" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -85,6 +96,8 @@
       <workItem from="1566322858315" duration="2521000" />
       <workItem from="1566409392749" duration="2788000" />
       <workItem from="1566485011099" duration="7563000" />
+      <workItem from="1566502546589" duration="1730000" />
+      <workItem from="1566544944947" duration="16349000" />
     </task>
     <servers />
   </component>
