@@ -3,10 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="e7857934-6e2a-4be0-a497-69af30e46a81" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bboard/templates/bboard/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/bboard/templates/layout/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bboard/templates/bboard/by_rubric.html" beforeDir="false" afterPath="$PROJECT_DIR$/bboard/templates/bboard/by_rubric.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bboard/templates/bboard/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/bboard/templates/bboard/create.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bboard/templates/bboard/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/bboard/templates/bboard/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bboard/templates/layout/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/bboard/templates/layout/base.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,6 +17,7 @@
       <list>
         <option value="Python Script" />
         <option value="HTML File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -34,6 +33,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../trydjango" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -96,6 +96,7 @@
       <workItem from="1566485011099" duration="7563000" />
       <workItem from="1566502546589" duration="1730000" />
       <workItem from="1566544944947" duration="19036000" />
+      <workItem from="1566591473439" duration="2485000" />
     </task>
     <servers />
   </component>
