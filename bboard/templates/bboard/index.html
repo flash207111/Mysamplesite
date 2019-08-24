@@ -9,6 +9,7 @@
             <h4>{{ bb.title }}</h4>
             <p>{{ bb.content }}</p>
             <p>Цена: {{ bb.price }} руб.</p>
+{#            <p>{{ bb.title_and_price }}</p>#}
             <p class="small">
                 <a href="{% url 'index' %}{{ bb.rubric.pk }}/">{{ bb.rubric.name }}</a>
             </p>

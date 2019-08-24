@@ -3,14 +3,17 @@
   <component name="ChangeListManager">
     <list default="true" id="e7857934-6e2a-4be0-a497-69af30e46a81" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bboard/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/bboard/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bboard/templates/bboard/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/bboard/templates/bboard/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bboard/templates/layout/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/bboard/templates/layout/base.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -36,6 +39,7 @@
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -97,6 +101,7 @@
       <workItem from="1566502546589" duration="1730000" />
       <workItem from="1566544944947" duration="19036000" />
       <workItem from="1566591473439" duration="2485000" />
+      <workItem from="1566632328956" duration="14657000" />
     </task>
     <servers />
   </component>

@@ -1,5 +1,5 @@
 from django.db import models
-
+from django.contrib.auth.models import User
 
 class Bb(models.Model):
     title = models.CharField(max_length=50, verbose_name='Товар')
@@ -12,6 +12,15 @@ class Bb(models.Model):
         verbose_name_plural = 'Объявления'
         verbose_name = 'Объявление'
         ordering = ['-published']
+        unique_together = ('title', 'published')
+
+    def title_and_price(self):
+        if self.price:
+            return '%s (%.2f)' % (self.title, self.price)
+        else:
+            return self.title
+
+    title_and_price.short_description = 'Название и цена'
 
 
 class Rubric(models.Model):
@@ -23,4 +32,9 @@ class Rubric(models.Model):
         verbose_name_plural = 'Рубрики'
         verbose_name = 'Рубрика'
         ordering = ['name']
+
+
+class AdvUser(models.Model):
+    is_activated = models.BooleanField(default=True)
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
 
