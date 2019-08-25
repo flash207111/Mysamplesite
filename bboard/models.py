@@ -1,8 +1,11 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.core import validators
 
 class Bb(models.Model):
-    title = models.CharField(max_length=50, verbose_name='Товар')
+    title = models.CharField(max_length=50, verbose_name='Товар',
+                             validators=[validators.RegexValidator(regex='^.{4,}$')],
+                             error_messages={'invalid': 'Неправильное название товара! В названии должно быть от 4 до 50 символов'})
     content = models.TextField(null=True, blank=True, verbose_name='Описание')
     price = models.FloatField(null=True, blank=True, verbose_name='Цена')
     published = models.DateTimeField(auto_now_add=True, db_index=True)
