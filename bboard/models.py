@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.core import validators
 
+
 class Bb(models.Model):
     title = models.CharField(max_length=50, verbose_name='Товар',
                              validators=[validators.RegexValidator(regex='^.{4,}$')],
@@ -28,6 +29,7 @@ class Bb(models.Model):
 
 class Rubric(models.Model):
     name = models.CharField(max_length=20, db_index=True, verbose_name='Название')
+
     def __str__(self):
         return self.name
 
@@ -40,4 +42,3 @@ class Rubric(models.Model):
 class AdvUser(models.Model):
     is_activated = models.BooleanField(default=True)
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-
