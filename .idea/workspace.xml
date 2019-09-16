@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="e7857934-6e2a-4be0-a497-69af30e46a81" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bboard/templates/layout/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/bboard/templates/layout/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bboard/templates/bboard/by_rubric.html" beforeDir="false" afterPath="$PROJECT_DIR$/bboard/templates/bboard/by_rubric.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bboard/templates/bboard/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/bboard/templates/bboard/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bboard/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/bboard/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bboard/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/bboard/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
@@ -20,9 +21,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="CSS File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -117,6 +118,10 @@
       <workItem from="1568356945612" duration="5346000" />
       <workItem from="1568373964453" duration="2801000" />
       <workItem from="1568386006455" duration="245000" />
+      <workItem from="1568459481829" duration="1939000" />
+      <workItem from="1568553655781" duration="930000" />
+      <workItem from="1568557868736" duration="750000" />
+      <workItem from="1568613316496" duration="5619000" />
     </task>
     <servers />
   </component>

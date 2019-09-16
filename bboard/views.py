@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.views.generic.edit import CreateView
+from django.views.generic.detail import DetailView
 from django.urls import reverse_lazy, reverse
 from django.http import HttpResponseRedirect
 from .models import Bb, Rubric
@@ -25,6 +26,14 @@ def by_rubric(request, rubric_id):
         'current_rubric': current_rubric
     }
     return render(request, 'bboard/by_rubric.html', context)
+
+class BbDetailView(DetailView):
+    model = Bb
+
+    def get_context_data(self, *args, **kwargs):
+        context = super().get_context_data(*args, **kwargs)
+        context['rubric'] = Rubric.objects.all()
+        return context
 
 
 # class BbCreateView(CreateView):

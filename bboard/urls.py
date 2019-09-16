@@ -8,5 +8,6 @@ urlpatterns = [
     # path('create/', views.BbCreateView.as_view(), name = 'create' ),
     # path('add/', views.add, name='add'),
     # path('add/save', views.add_save, name='add')
-    path('add/', views.add_and_save, name='add')
+    path('add/', views.add_and_save, name='add'),
+    path('detail/<int:pk>/', views.BbDetailView.as_view(), name='detail'),
 ]
