@@ -11,6 +11,7 @@
         <h2>{{ bb.title }}</h2>
         <p>{{ bb.content }}</p>
         <p>Цена: {{ bb.price }} руб.</p>
-        <p class="small"><a href="{% url 'update' bb.pk %}">редактировать</a></p>
+        <p class="small"><a href="{% url 'update' bb.pk %}">Редактировать</a></p>
+        <p class="small"><a href="{% url 'delete' bb.pk %}">Запрос на удаление</a></p>
     </div>
 {% endblock %}

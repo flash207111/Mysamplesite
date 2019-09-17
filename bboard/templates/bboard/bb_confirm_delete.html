@@ -1,0 +1,21 @@
+{% extends 'layout/base.html' %}
+
+{% block title %}
+    Удалить {{ bb.title }}
+{% endblock %}
+
+{% block content %}
+    <div class="container-fluid">
+        <h3>Удаление объявления</h3>
+    </div>
+    <div class="container">
+        <h5>Рубрика: {{ bb.rubric.name }}</h5>
+        <h4>{{ bb.title }}</h4>
+        <p>{{ bb.content }}</p>
+        <p>Цена: {{ bb.price }} руб.</p>
+        <form method="post">
+            {% csrf_token %}
+            <input class="btn btn-danger" type="submit" value="Delete">
+        </form>
+    </div>
+{% endblock %}

@@ -13,4 +13,5 @@ urlpatterns = [
     path('detail/<int:pk>/', views.BbDetailView.as_view(), name='detail'),
     path('create/', views.BbAddView.as_view(), name='create'),
     path('update/<int:pk>/', views.BbEditView.as_view(), name='update'),
+    path('delete/<int:pk>/', views.BbDeleteView.as_view(), name='delete'),
 ]
