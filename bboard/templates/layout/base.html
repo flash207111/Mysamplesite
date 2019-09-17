@@ -14,8 +14,8 @@
         <div id='nb' class="container">
             <div class="navbar">
                 <a href="{% url 'index' %}">Главная</a>
-{#                <a href="{% url 'create' %}">Добавить</a>#}
-                <a href="{% url 'add' %}">Добавить</a>
+                <a href="{% url 'create' %}">Добавить</a>
+{#                <a href="{% url 'add' %}">Добавить</a>#}
                 {% for rubric in rubrics %}
 {#                    <a href="{% url 'index' %}{{ rubric.pk }}/">{{ rubric.name }}</a>#}
                     <a href="{% url 'by_rubric' rubric.pk %}">{{ rubric.name }}</a>
