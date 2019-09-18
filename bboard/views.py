@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.views.generic.edit import CreateView, FormView, UpdateView, DeleteView
 from django.views.generic.detail import DetailView
+from django.views.generic.dates import ArchiveIndexView
 from django.views.generic.list import ListView
 from django.urls import reverse_lazy, reverse
 from django.http import HttpResponseRedirect
@@ -8,14 +9,27 @@ from .models import Bb, Rubric
 from .forms import BbForm
 
 
-def index(request):
-    bbs = Bb.objects.all()
-    rubrics = Rubric.objects.all()
-    context = {
-        'bbs': bbs,
-        'rubrics': rubrics,
-      }
-    return render(request, 'bboard/index.html', context)
+# def index(request):
+#     bbs = Bb.objects.all()
+#     rubrics = Rubric.objects.all()
+#     context = {
+#         'bbs': bbs,
+#         'rubrics': rubrics, }
+#     return render(request, 'bboard/index.html', context)
+
+
+class BbIndexView(ArchiveIndexView):
+    model = Bb
+    date_field = 'published'
+    template_name = 'bboard/index.html'
+    context_object_name = 'bbs'
+    allow_empty = True
+
+    def get_context_data(self, *args, **kwargs):
+        context = super().get_context_data(*args, **kwargs)
+        context['rubrics'] = Rubric.objects.all()
+        return context
+
 
 # def by_rubric(request, rubric_id):
 #     bbs = Bb.objects.filter(rubric=rubric_id)
@@ -37,7 +51,7 @@ class BbByRubricView(ListView):
 
     def get_context_data(self, *args, **kwargs):
         context = super().get_context_data(*args, **kwargs)
-        context['rubric'] = Rubric.objects.all()
+        context['rubrics'] = Rubric.objects.all()
         context['current_rubric'] = Rubric.objects.get(pk=self.kwargs['rubric_id'])
         return context
 
@@ -46,7 +60,7 @@ class BbDetailView(DetailView):
 
     def get_context_data(self, *args, **kwargs):
         context = super().get_context_data(*args, **kwargs)
-        context['rubric'] = Rubric.objects.all()
+        context['rubrics'] = Rubric.objects.all()
         return context
 
 
