@@ -10,16 +10,27 @@
     <div class="container-fluid">
         <h1>Объявления</h1>
         <h3>Рубрика: {{ current_rubric.name }}</h3>
+        {# <h5>Сейчас: {% now 'r' %}</h3> #}
+        <h5>Сейчас: {% now 'd.m.Y H:i' %}</h3>
+        {% with bb_count=bbs.count %}
+            {% if bb_count > 0 %}
+                <p class="small">Всего {{ bb_count }} объявлений</p>{% endif %}
+            {% endwith %}
     </div>
 
         <div class="container">
-            {% for bb in bbs %}
-                <h4><a href="{% url 'detail' bb.pk %}">{{ bb.title }}</a></h4>
-                <p>{{ bb.content }}</p>
-                <p>Цена: {{ bb.price }} руб.</p>
-                <p class="small">Дата публикации: {{ bb.published|date:"d.m.Y H:i" }}</p>
-    {#            <p>{{ bb.price }}</p>#}
-            {% endfor %}
-
+            {% if bbs %}
+                {% for bb in bbs|dictsort:'price' %}
+                    
+                        <h4><a href="{% url 'detail' bb.pk %}">{{ bb.title }}</a></h4>
+                        <p>{{ bb.content|urlize }}</p>
+                        <p>Цена: {{ bb.price|floatformat:2 }} руб.</p>
+                        <p class="small">Дата публикации: {{ bb.published|date:"d.m.Y H:i" }}</p>
+                        {#<p>{{ bb.price }}</p>#}                   
+                    
+                {% endfor %}
+            {% else %}
+                <p>Объявлений нет</p>
+            {% endif %}
         </div>
 {% endblock %}
