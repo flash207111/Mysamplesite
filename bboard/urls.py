@@ -3,9 +3,9 @@ from . import views
 
 # app_name = 'bboard'
 urlpatterns = [
-	path('', views.BbIndexView.as_view(), name='index'),
-    # path('', views.index, name='index'),
-    # path('<int:rubric_id>/', views.by_rubric, name = 'by_rubric' ),
+	# path('', views.BbIndexView.as_view(), name='index'),
+    path('', views.index, name='index'),
+	# path('<int:rubric_id>/', views.by_rubric, name = 'by_rubric' ),
     # path('create/', views.BbCreateView.as_view(), name = 'create' ),
     path('<int:rubric_id>/', views.BbByRubricView.as_view(), name='by_rubric'),
     # path('add/', views.add, name='add'),

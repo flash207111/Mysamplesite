@@ -1,34 +1,42 @@
 from django.shortcuts import render
-from django.views.generic.edit import CreateView, FormView, UpdateView, DeleteView
+from django.views.generic.edit import FormView, UpdateView, DeleteView
 from django.views.generic.detail import DetailView
-from django.views.generic.dates import ArchiveIndexView
+# from django.views.generic.dates import ArchiveIndexView
 from django.views.generic.list import ListView
-from django.urls import reverse_lazy, reverse
-from django.http import HttpResponseRedirect
+from django.urls import reverse
+# from django.http import HttpResponseRedirect
+from django.core.paginator import Paginator
 from .models import Bb, Rubric
 from .forms import BbForm
 
 
-# def index(request):
-#     bbs = Bb.objects.all()
-#     rubrics = Rubric.objects.all()
-#     context = {
-#         'bbs': bbs,
-#         'rubrics': rubrics, }
-#     return render(request, 'bboard/index.html', context)
+def index(request):
+    bbs = Bb.objects.all()
+    rubrics = Rubric.objects.all()
+    paginator = Paginator(bbs, 2)
+    if 'page' in request.GET:
+        page_num = request.GET['page']
+    else:
+        page_num = 1
+    page = paginator.get_page(page_num)
+    context = {
+        'rubrics': rubrics,
+        'page': page,
+        'bbs': page.object_list}
+    return render(request, 'bboard/index.html', context)
 
 
-class BbIndexView(ArchiveIndexView):
-    model = Bb
-    date_field = 'published'
-    template_name = 'bboard/index.html'
-    context_object_name = 'bbs'
-    allow_empty = True
+# class BbIndexView(ArchiveIndexView):
+#     model = Bb
+#     date_field = 'published'
+#     template_name = 'bboard/index.html'
+#     context_object_name = 'bbs'
+#     allow_empty = True
 
-    def get_context_data(self, *args, **kwargs):
-        context = super().get_context_data(*args, **kwargs)
-        context['rubrics'] = Rubric.objects.all()
-        return context
+#     def get_context_data(self, *args, **kwargs):
+#         context = super().get_context_data(*args, **kwargs)
+#         context['rubrics'] = Rubric.objects.all()
+#         return context
 
 
 # def by_rubric(request, rubric_id):
@@ -52,8 +60,10 @@ class BbByRubricView(ListView):
     def get_context_data(self, *args, **kwargs):
         context = super().get_context_data(*args, **kwargs)
         context['rubrics'] = Rubric.objects.all()
-        context['current_rubric'] = Rubric.objects.get(pk=self.kwargs['rubric_id'])
+        context['current_rubric'] = \
+            Rubric.objects.get(pk=self.kwargs['rubric_id'])
         return context
+
 
 class BbDetailView(DetailView):
     model = Bb
@@ -119,7 +129,8 @@ class BbAddView(FormView):
         return self.object
 
     def get_success_url(self):
-        return reverse('by_rubric', kwargs={'rubric_id': self.object.cleaned_data['rubric'].pk})
+        return reverse('by_rubric', kwargs={
+            'rubric_id': self.object.cleaned_data['rubric'].pk})
 
 
 
